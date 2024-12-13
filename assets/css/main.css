@@ -1,0 +1,12 @@
+@font-face {
+    font-family: starwars;
+    src: url('../fonts/Starjedi.ttf');
+}
+:root {
+    --blue: #264558;
+    --orange: #FDD326;
+}
+
+.star-wars-logo{
+    font-family: starwars;
+}
