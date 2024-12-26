@@ -21,7 +21,12 @@ function showPlanets($baseUrl)
 function showThisPlanet($baseUrl, $id)
 {
     $url = $baseUrl . 'planets/' . $id;
-    $planet = apiCall($url) ?? apiCall($baseUrl . 'planets/1');
+    if (isset($_GET['wokie'])) {
+        $planet = apiCall($url . '?format=wookiee') ?? apiCall($baseUrl . 'planets/1?format=wookiee');
+        $planet = traducirDelWoke('planets', $planet);
+    } else{
+        $planet = apiCall($url) ?? apiCall($baseUrl . 'planets/1');
+    }
     $planetDetails = getPlanetDetails($planet);
 
     require_once __DIR__ . '/../views/component/planet/planet.php';

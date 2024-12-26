@@ -19,7 +19,13 @@ function showPeople($baseUrl) {
 function showThisPerson($baseUrl, $id)
 {
     $url = $baseUrl . 'people/' . $id;
-    $people = apiCall($url) ?? apiCall($baseUrl . 'people/1');
+    
+    if(isset($_GET['wokie'])){
+        $people = apiCall($url . '?format=wookiee') ?? apiCall($baseUrl . 'people/1/?format=wookiee');
+        $people = traducirDelWoke('people', $people);
+    } else{
+        $people = apiCall($url) ?? apiCall($baseUrl . 'people/1');
+    }
     $person = getPersonDetails($people);
 
     require_once __DIR__ . '/../views/component/people/people.php';
@@ -30,10 +36,14 @@ function getPersonDetails($people){
     $species = [];
     $vehicles = [];
     $starships = [];
-    $homeworldData = apiCall($people['homeworld']);
-    $homeworldId = basename(rtrim($people['homeworld'], '/'));
-    $homeworld = $homeworldData['name'];
-
+    if(isset($_GET['wokie'])){
+        $homeworldId = basename(rtrim($people['homeworld'], '/'));
+        $homeworld = 'Algo en wookiee';
+    }else {
+        $homeworldData = apiCall($people['homeworld']);
+        $homeworldId = basename(rtrim($people['homeworld'], '/'));
+        $homeworld = $homeworldData['name'];
+    }
     foreach ($people['films'] as $filmUrl) {
         $filmId = basename(rtrim($filmUrl, '/'));
         $filmData = apiCall($filmUrl);
