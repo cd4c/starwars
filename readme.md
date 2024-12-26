@@ -7,14 +7,14 @@
 ## Planetas
 
 - [x] Mostrar todos los planetas
-- [ ] Detalles del planeta
-- [ ] Enlace a sus personajes
+- [x] Detalles del planeta
+- [x] Enlace a sus personajes
 
 ## Personajes
 
-- [ ] Mostrar todos los personajes
-- [ ] Detalles de personaje
-- [ ] Añadir enlace a su planeta
+- [x] Mostrar todos los personajes
+- [x] Detalles de personaje
+- [x] Añadir enlace a su planeta
 
 ## Viajes a planetas
 

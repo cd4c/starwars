@@ -11,6 +11,12 @@ switch ($request) {
     case '/planetas':
         require_once __DIR__ . '/controllers/planet_controller.php';
         break;
+    case '/personajes':
+        require_once __DIR__ . '/controllers/people_controller.php';
+        break;
+    case '/peliculas':
+        require_once __DIR__ . '/controllers/film_controller.php';
+        break;
     default:
         http_response_code(404);
         /* require __DIR__ . '/views/404.php'; */

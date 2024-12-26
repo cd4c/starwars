@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planetas Star Wars</title>
+    <title>d4c ~ Star Wars</title>
     <link rel="stylesheet" href="/starwars/assets/css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -20,6 +20,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/starwars/planetas">Planetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/starwars/personajes">Personajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/starwars/peliculas">Peliculas</a>
                     </li>
                 </ul>
             </div>
