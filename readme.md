@@ -22,6 +22,10 @@
 - [ ] Filtrar por terreno
 - [ ] Filtrar por poblacion
 
+## Wookiee
+
+- [x] Añadir wookie
+
 ### OPCIONAL
 
 - [ ] Buscador por nombre de planeta

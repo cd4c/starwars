@@ -17,8 +17,11 @@ function traducirDelWoke($tipoRecurso, $datos)
 
     foreach ($datos as $clave => $valor) {
         $claveTraducida = $mapaClaves[$clave] ?? $clave;
-
-        $datosTraducidos[$claveTraducida] = traducirDelWoke($tipoRecurso, $valor);
+        if (is_array($valor)) {
+            $datosTraducidos[$claveTraducida] = traducirDelWoke($tipoRecurso, $valor);
+        } else {
+            $datosTraducidos[$claveTraducida] = $valor;
+        }
     }
 
     return $datosTraducidos;
