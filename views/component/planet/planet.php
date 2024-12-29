@@ -19,12 +19,23 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
+    .planet-image {
+        display: block;
+        max-width: 200px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+    }
 </style>
 <div class="container my-5">
     <div class="card card-planet p-4">
         <div class="card-body">
+            <?php if (isset($imageSrc)): ?>
+                <img src="<?php echo $imageSrc; ?>" alt="Imagen de <?php echo $planet['name']; ?>" class="planet-image">
+            <?php else: ?>
+                <p class="text-center">No se encontró una imagen para este planeta.</p>
+            <?php endif; ?>
             <h1 class="text-center text-primary mb-4"><?php echo $planet['name']; ?></h1>
-
             <div class="row">
                 <div class="col-md-6">
                     <h4 class="section-title">Detalles del Planeta</h4>
@@ -58,7 +69,7 @@
             <ul class="list-group">
                 <?php foreach ($planetDetails['films'] as $film): ?>
                     <li class="list-group-item">
-                        <a href="/starwars/peliculas?id=<?php echo $film['id']; ?>" class="text-decoration-none">
+                        <a href="" class="text-decoration-none">
                             <b><?php echo $film['title']; ?></b>
                         </a>
                     </li>

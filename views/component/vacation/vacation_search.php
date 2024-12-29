@@ -59,17 +59,3 @@
         <?php endif; ?>
     </div>
 </div>
-<!-- para no mandar la llamada con elementos vacios en la url -->
-<script>
-    document.getElementById('searchForm').addEventListener('submit', function(event) {
-        const form = event.target;
-        const inputs = form.querySelectorAll('input, select');
-
-        inputs.forEach(input => {
-            if ((input.type === 'number' && !input.value.trim()) ||
-                (input.tagName === 'SELECT' && input.selectedOptions.length === 0)) {
-                input.disabled = true;
-            }
-        });
-    });
-</script>

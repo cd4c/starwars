@@ -20,17 +20,23 @@ function showPlanets($baseUrl)
 
 function showThisPlanet($baseUrl, $id)
 {
+    require_once __DIR__ . '/../helpers/scrap.php'; 
+
     $url = $baseUrl . 'planets/' . $id;
+
     if (isset($_GET['wokie'])) {
         $planet = apiCall($url . '?format=wookiee') ?? apiCall($baseUrl . 'planets/1?format=wookiee');
         $planet = traducirDelWoke('planets', $planet);
-    } else{
+    } else {
         $planet = apiCall($url) ?? apiCall($baseUrl . 'planets/1');
     }
+
+    $imageSrc = getImageEntity($planet['name']);
     $planetDetails = getPlanetDetails($planet);
 
     require_once __DIR__ . '/../views/component/planet/planet.php';
 }
+
 
 function getPlanetDetails($planet)
 {

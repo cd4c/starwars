@@ -27,7 +27,7 @@
 </script>
 
 <body>
-    <div class="content">   
+    <div class="content">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
             <div class="container">
                 <a class="navbar-brand star-wars-logo" href="/starwars/">Star Wars</a>
@@ -42,11 +42,13 @@
                         <a class="nav-link" href="/starwars/personajes">Personajes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/starwars/peliculas">Peliculas</a>
+                        <a class="nav-link" href="/starwars/vacaciones">Buscador vacacional</a>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-light ms-3" id="wokie">Wookiee</button>
-                    </li>
+                    <?php if ($idExists): ?>
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light ms-3" id="wokie">Wookiee</button>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>

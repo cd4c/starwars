@@ -1,5 +1,7 @@
 <?php
 $baseUrl = 'https://swapi.py4e.com/api/'; // original = https://swapi.dev/api/
+// para controlar el boton de wokiee
+$idExists = isset($_GET['id']) && !empty($_GET['id']);
 
 function apiCall($url)
 {

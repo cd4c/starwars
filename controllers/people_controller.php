@@ -18,6 +18,8 @@ function showPeople($baseUrl) {
 
 function showThisPerson($baseUrl, $id)
 {
+    require_once __DIR__ . '/../helpers/scrap.php'; 
+
     $url = $baseUrl . 'people/' . $id;
     
     if(isset($_GET['wokie'])){
@@ -26,6 +28,7 @@ function showThisPerson($baseUrl, $id)
     } else{
         $people = apiCall($url) ?? apiCall($baseUrl . 'people/1');
     }
+    $imageSrc = getImageEntity($people['name']);
     $person = getPersonDetails($people);
 
     require_once __DIR__ . '/../views/component/people/people.php';
