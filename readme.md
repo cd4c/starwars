@@ -32,9 +32,8 @@
 
 ## Web Scraping
 
-- [ ] URL entidades (todas las que se puedan)
-- [ ] URL de la imagen de la entidad
-- [ ] Asociar la URL de la imagen con la entidad en SWAPI
+- [x] URL entidades (todas las que se puedan)
+- [x] URL de la imagen de la entidad
 
 ### Apuntes Web Scraping
 
