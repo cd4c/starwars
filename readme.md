@@ -2,7 +2,7 @@
 
 ## General
 
-- [ ] MVP (minimum viable product)
+- [x] MVP (minimum viable product)
 
 ## Planetas
 
@@ -18,9 +18,9 @@
 
 ## Viajes a planetas
 
-- [ ] Filtrar por clima
-- [ ] Filtrar por terreno
-- [ ] Filtrar por poblacion
+- [x] Filtrar por clima
+- [x] Filtrar por terreno
+- [x] Filtrar por poblacion
 
 ## Wookiee
 

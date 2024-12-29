@@ -74,7 +74,7 @@ function getPersonDetails($people){
             $species[] = [
                 'id' => $specieId,
                 'name' => "Nombre desconocido",
-                'classificaation' => 'algo será...',
+                'classification' => 'algo será...',
                 'average_lifespan' => '???',
             ];
         }

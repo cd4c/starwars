@@ -27,13 +27,13 @@
 </script>
 
 <body>
-    <div class="content">
+    <div class="content">   
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
             <div class="container">
                 <a class="navbar-brand star-wars-logo" href="/starwars/">Star Wars</a>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/starwars/">Home</a>
+                        <a class="nav-link" href="/starwars/">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/starwars/planetas">Planetas</a>

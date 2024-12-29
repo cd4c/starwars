@@ -17,6 +17,9 @@ switch ($request) {
     case '/peliculas':
         require_once __DIR__ . '/controllers/film_controller.php';
         break;
+    case '/vacaciones':
+        require_once __DIR__ . '/controllers/vacations_controller.php';
+        break;
     default:
         http_response_code(404);
         /* require __DIR__ . '/views/404.php'; */
